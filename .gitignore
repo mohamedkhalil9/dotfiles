@@ -24,3 +24,7 @@
 
 !waybar/
 !waybar/**
+
+!*.kwinscript
+
+!.zshrc
