@@ -1,11 +1,11 @@
 window-decoration = false 
-#window-padding-x = 0
-#window-padding-y = 0
-#window-padding-balance = true
-#window-padding-color = extend 
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+window-padding-color = extend
 
 font-family = JetBrainsMono Nerd Font 
-font-size = 16.5
+font-size = 15
 
 background-opacity = 0.93
 
