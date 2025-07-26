@@ -24,7 +24,11 @@ return {
 
     local sources = {
       diagnostics.checkmake,
-      formatting.prettier.with { filetypes = { 'javascript', 'typescript', 'html', 'json', 'yaml', 'markdown' } },
+      formatting.prettier.with {
+        filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'html', 'css', 'json', 'yaml', 'markdown' },
+        extra_args = { '--tab-width', '2' },
+        -- '--use-tabs', 'false' },
+      },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
       formatting.terraform_fmt,

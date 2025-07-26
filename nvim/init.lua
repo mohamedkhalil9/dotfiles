@@ -33,6 +33,7 @@ require('lazy').setup {
   require 'plugins.vim-be-good',
   require 'plugins.harpoon',
   require 'plugins.render-markdown',
+  require 'plugins.copilot',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
