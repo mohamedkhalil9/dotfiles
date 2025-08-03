@@ -27,7 +27,7 @@ return {
       formatting.prettier.with {
         filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'html', 'css', 'json', 'yaml', 'markdown' },
         extra_args = { '--tab-width', '2' },
-        -- '--use-tabs', 'false' },
+        -- '--use-tabs', 'true' },
       },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
