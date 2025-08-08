@@ -1,64 +1,70 @@
 {
     "spacing": 0,
-
+    "height": 26,
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-    ],
-    "modules-center": [
-        //"hyprland/window"
-        "clock",
     ],
     "modules-right": [
-        "temperature",
-        "cpu",
-        "memory",
-        "backlight",
-        //"network",
+        "group/tray-expander",
+        "bluetooth",
+        "network",
         "pulseaudio",
-        "power-profiles-daemon",
         "battery",
-        //"idle_inhibitor"
-        "hyprland/language",
-        "tray",
+        "clock"
     ],
 
-    //"hyprland/workspaces": {
-    //    "format": "{icon}",
-    //    "on-click": "activate",
-    //    "format-icons": {
-    //    "2": "",
-    //    "3": ""
-    //    },
-    //    "sort-by-number": true
-    //},
+  "network": {
+    "format-wifi": "<span color='#00FFFF'> 󰤨  </span>{signalStrength}%",
+    "format-ethernet": "<span color='#7FFF00'> </span>Wired",
+    "tooltip-format": "<span color='#FF1493'> 󰅧 </span>{bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
+    "format-linked": "<span color='#FFA500'> 󱘖 </span>{ifname} (No IP)",
+    "format-disconnected": "<span color='#FF4040'>  </span>",
+    // "format-alt": "<span color='#00FFFF'> 󰤨  </span>{signalStrength}%",
+    "interval": 1
+  },
+
+  "bluetooth": {
+    "format": "<span color='#00BFFF'>  </span>{status}",
+    "format-no-controller": "<span color='#00BFFF'>  </span>",
+    // "format-connected": "<span color='#00BFFF'>  </span>{device_alias}",
+    "format-connected-battery": "<span color='#00BFFF'>  </span>{device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "blueberry",
+  },
 
     "hyprland/language": {
-       "format": "  {}",
+       "format": "<span>   </span>{}",
        "format-en": "EN",
        "format-ar": "AR"
     },
  
     "clock": {
         "interval": 1,
-        "format": "{:%a, %d %b %Y  %H:%M}",
+        "format": " {:%a, %d %b %H:%M} ",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
     "cpu": {
         "interval": 1,
-        "format": "  {usage}%",
+        "format": "<span color='#FF9F0A'>   </span>{usage}%",
     },
 
     "memory": {
         "interval": 1,
-        "format": "  {}%"
+        "format": "<span color='#8A2BE2'>   </span>{}%",
     },
 
     "backlight": {
-        "format": "{icon} {percent}%",
-        "format-icons": ["🔅", "🔆"]
+        "format": "{icon}{percent}%",
+         "format-icons": [
+      "<span color='#696969'> 󰃞  </span>",  // 暗 - 深灰
+      "<span color='#A9A9A9'> 󰃝  </span>",  // 中 - 灰
+      "<span color='#FFFF66'> 󰃟  </span>",  // 亮 - 柠檬黄
+      "<span color='#FFD700'> 󰃠  </span>"   // 最亮 - 金色
+    ]
     },
 
     "battery": {
@@ -67,30 +73,36 @@
             "critical": 10
         },
         "interval": 1,
-        "format": "{icon}  {capacity}%",
-        "format-charging": "⚡ {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-icons": [" ", " ", " ", " ", " "]
+    "format": "<span color='#28CD41'> {icon} </span>{capacity}% ",
+        "format-charging": " ⚡{capacity}% ",
+        "format-plugged": "  {capacity}% ",
+        // "format-icons": ["<span>   </span>", "<span>   </span>", "<span>   </span>", "<span>   </span>", "<span>   </span>"]
+    "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     },
-
-    //"network": {
-    //    "format-wifi": "  ({signalStrength}%) {essid}",
-    //    "format-ethernet": "{ipaddr}/{cidr}  ",
-    //    "tooltip-format": "{ifname} via {gwaddr} ",
-    //    "format-linked": "{ifname} (No IP)  ",
-    //    "format-disconnected": "⚠"
-    //},
     
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        // "format": "{icon}{volume}%",
+        "format": "<span color='#00FF7F'>{icon}</span>{volume}% ",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}%",
-        "format-source-muted": " ",
+        "format-muted": "<span color='#FF4040'> 󰖁 </span>{format_source} ",
+        // "format-muted": "<span>  </span>{format_source}",
+        "format-source": "<span></span> {volume}%",
+        "format-source-muted": "<span color='#FF4040'> </span>",
         "format-icons": {
-            "headphone": " ",
-            "hands-free": " ",
-            "default": ["", " ", " "]
+            "headphone": "<span color='#BF00FF'>  </span>",
+            "hands-free": "<span color='#BF00FF'>  </span>",
+            "headset": "<span color='#BF00FF'>  </span>",
+            "phone": "<span color='#00FFFF'>  </span>",
+            "portable": "<span color='#00FFFF'>  </span>",
+            "car": "<span color='#FFA500'>  </span>",
+        //     "hands-free": "<span>  </span>",
+            "default": [
+                "<span color='#808080'>  </span>",
+                "<span color='#FFFF66'>  </span>",
+                "<span color='#00FF7F'>  </span>"
+            ]
         },
         "on-click": "pavucontrol"
     },
@@ -112,8 +124,9 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": [" ", "", " "]
+        "format": "{icon}{temperatureC}°C",
+    // "format": "<span color='#FFA500'> </span>{}°C ",
+        "format-icons": ["<span color='#FFA500'>  </span>", "<span color='#FFA500'>  </span>", "<span color='#FFA500'>  </span>"]
     },
 
     "power-profiles-daemon": {
@@ -121,10 +134,32 @@
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
         "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
+        "default": "<span>   </span>",
+        "performance": "<span>   </span>",
+        "balanced": "<span>   </span>",
+        "power-saver": "<span>   </span>"
         }
     },
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item"
+    },
+    "modules": [
+      "custom/expand-icon",
+        "tray",
+        "temperature",
+        "cpu",
+        "memory",
+        "backlight",
+        //"network",
+        "hyprland/language",
+        "power-profiles-daemon",
+    ]
+  },
+  "custom/expand-icon": {
+    "format": " ",
+    "tooltip": false
+  },
 }
