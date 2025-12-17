@@ -1,40 +1,20 @@
 window-decoration = false 
-window-padding-x = 0
-window-padding-y = 0
+# window-padding-x = 0
+# window-padding-y = 0
 window-padding-balance = true
+# window-width = 110
+# window-height = 25 
 
 font-family = JetBrainsMono Nerd Font 
-font-size = 16
+font-size = 15
 
-background-opacity = 0.93
+background-opacity = 0.98
+theme = OneHalfDark
 
-background = #14151e
-#background = #161821
-foreground = #c6c8d1
-selection-background = #272c42
-selection-foreground = #c6c8d1
-cursor-color = #c6c8d1
-cursor-text = #161821
+# background = #252930
+background = #1e2127
+# background = #1a1d23
 
+# background= #1f2430
 # background = #161821
-# foreground = #abb2bf
-# selection-background = #abb2bf
-# selection-foreground = #282c34
-# cursor-color = #abb2bf
-# cursor-text = #282c34
-palette = 0=#1e2127
-palette = 1=#e06c75
-palette = 2=#98c379
-palette = 3=#d19a66
-palette = 4=#61afef
-palette = 5=#c678dd
-palette = 6=#56b6c2
-palette = 7=#abb2bf
-palette = 8=#5c6370
-palette = 9=#e06c75
-palette = 10=#98c379
-palette = 11=#d19a66
-palette = 12=#61afef
-palette = 13=#c678dd
-palette = 14=#56b6c2
-palette = 15=#ffffff
+# background = #14151e

@@ -1,14 +1,12 @@
 * {
-  font-family:
-    /* CommitMono Nerd Font, */ Inter, FontAwesome;
+  font-family: Inter, FontAwesome;
+  /* CommitMono Nerd Font, */
   /* JetBrainsMono Nerd Font; */
   font-size: 16px;
 }
 
 window#waybar {
-  /* background-color: rgba(43, 44, 52, 0.9); */
-  /* background-color: rgba(40, 44, 52, 0.97); */
-  background-color: rgba(22, 24, 33, 0.9);
+  background-color: rgba(22, 24, 33, 0.99);
   /* color: #ffffff; */
   transition: background-color 0.5s;
 }
@@ -18,10 +16,8 @@ window#waybar.hidden {
 }
 
 #window {
-  font-family:
-    CommitMono Nerd Font,
-    Inter,
-    FontAwesome;
+  font-family: Inter, FontAwesome;
+  /* CommitMono Nerd Font, */
   /* JetBrainsMono Nerd Font; */
 }
 
@@ -51,19 +47,19 @@ window#waybar.hidden {
 }
 
 #tray {
-  margin: 0 8px;
+  margin: 0 5px;
   /*background-color: #3b3f51;*/
   /*color: #282a36;*/
-  color: #ffffff;
+  /* color: #ffffff; */
   /*border-radius: 7;*/
 }
 
-#tray > .passive {
+#tray>.passive {
   -gtk-icon-effect: dim;
   color: #6272a4;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
   background-color: #ff5555;
   color: #ffffff;
 }
