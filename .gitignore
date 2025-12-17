@@ -25,6 +25,15 @@
 !waybar/
 !waybar/**
 
+!rofi/
+!rofi/**
+
+!swaync/
+!swaync/**
+
+!wlogout/
+!wlogout/**
+
 !*.kwinscript
 
 !.zshrc
