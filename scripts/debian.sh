@@ -74,6 +74,8 @@ sudo apt install gparted xreader filezilla #superproductivity
 # zen-browser-bin apidog notion-app-electron                        #anytype-bin
 # mongodb-bin mongodb-compass-bin nomacs code #visual-studio-code-bin
 
+# droidcam
+
 # asusctl
 
 # # dwm download and build
