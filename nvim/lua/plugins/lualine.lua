@@ -40,39 +40,39 @@ return {
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        -- theme = 'onedark', -- Set theme based on environment variable
-        theme = {
-          normal = {
-            a = { bg = '#61afef', fg = '#282c34', gui = 'bold' },
-            b = { bg = '#282c34', fg = '#abb2bf' },
-            c = { bg = '#1a1d23', fg = '#abb2bf' },
-          },
-          insert = {
-            a = { bg = '#98c379', fg = '#282c34', gui = 'bold' },
-            b = { bg = '#282c34', fg = '#abb2bf' },
-            c = { bg = '#1a1d23', fg = '#abb2bf' },
-          },
-          visual = {
-            a = { bg = '#c678dd', fg = '#282c34', gui = 'bold' },
-            b = { bg = '#282c34', fg = '#abb2bf' },
-            c = { bg = '#1a1d23', fg = '#abb2bf' },
-          },
-          replace = {
-            a = { bg = '#e06c75', fg = '#282c34', gui = 'bold' },
-            b = { bg = '#282c34', fg = '#abb2bf' },
-            c = { bg = '#1a1d23', fg = '#abb2bf' },
-          },
-          command = {
-            a = { bg = '#e5c07b', fg = '#282c34', gui = 'bold' },
-            b = { bg = '#282c34', fg = '#abb2bf' },
-            c = { bg = '#1a1d23', fg = '#abb2bf' },
-          },
-          inactive = {
-            a = { bg = '#3e4452', fg = '#5c6370' },
-            b = { bg = '#282c34', fg = '#5c6370' },
-            c = { bg = '#1a1d23', fg = '#5c6370' },
-          },
-        },
+        theme = 'auto', -- Set theme based on environment variable
+        -- theme = {
+        --   normal = {
+        --     a = { bg = '#61afef', fg = '#282c34', gui = 'bold' },
+        --     b = { bg = '#282c34', fg = '#abb2bf' },
+        --     c = { bg = '#1a1d23', fg = '#abb2bf' },
+        --   },
+        --   insert = {
+        --     a = { bg = '#98c379', fg = '#282c34', gui = 'bold' },
+        --     b = { bg = '#282c34', fg = '#abb2bf' },
+        --     c = { bg = '#1a1d23', fg = '#abb2bf' },
+        --   },
+        --   visual = {
+        --     a = { bg = '#c678dd', fg = '#282c34', gui = 'bold' },
+        --     b = { bg = '#282c34', fg = '#abb2bf' },
+        --     c = { bg = '#1a1d23', fg = '#abb2bf' },
+        --   },
+        --   replace = {
+        --     a = { bg = '#e06c75', fg = '#282c34', gui = 'bold' },
+        --     b = { bg = '#282c34', fg = '#abb2bf' },
+        --     c = { bg = '#1a1d23', fg = '#abb2bf' },
+        --   },
+        --   command = {
+        --     a = { bg = '#e5c07b', fg = '#282c34', gui = 'bold' },
+        --     b = { bg = '#282c34', fg = '#abb2bf' },
+        --     c = { bg = '#1a1d23', fg = '#abb2bf' },
+        --   },
+        --   inactive = {
+        --     a = { bg = '#3e4452', fg = '#5c6370' },
+        --     b = { bg = '#282c34', fg = '#5c6370' },
+        --     c = { bg = '#1a1d23', fg = '#5c6370' },
+        --   },
+        -- },
         -- https://www.nerdfonts.com/cheat-sheet
         --         '' '' { left = '|', right = '|' },
         section_separators = { left = '', right = '' },

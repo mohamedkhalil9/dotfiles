@@ -152,6 +152,8 @@ return {
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
+      -- copilot.lua only works with its own copilot lsp server
+      copilot = { enabled = false },
       -- clangd = {},
       -- gopls = {},
       -- pyright = {},
@@ -163,29 +165,29 @@ return {
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       ts_ls = {}, -- tsserver is deprecated
-      ruff = {},
-      pylsp = {
-        settings = {
-          pylsp = {
-            plugins = {
-              pyflakes = { enabled = false },
-              pycodestyle = { enabled = false },
-              autopep8 = { enabled = false },
-              yapf = { enabled = false },
-              mccabe = { enabled = false },
-              pylsp_mypy = { enabled = false },
-              pylsp_black = { enabled = false },
-              pylsp_isort = { enabled = false },
-            },
-          },
-        },
-      },
+      -- ruff = {},
+      -- pylsp = {
+      --   settings = {
+      --     pylsp = {
+      --       plugins = {
+      --         pyflakes = { enabled = false },
+      --         pycodestyle = { enabled = false },
+      --         autopep8 = { enabled = false },
+      --         yapf = { enabled = false },
+      --         mccabe = { enabled = false },
+      --         pylsp_mypy = { enabled = false },
+      --         pylsp_black = { enabled = false },
+      --         pylsp_isort = { enabled = false },
+      --       },
+      --     },
+      --   },
+      -- },
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
       tailwindcss = {},
       dockerls = {},
-      sqlls = {},
-      terraformls = {},
+      -- sqlls = {},
+      -- terraformls = {},
       jsonls = {},
       yamlls = {},
 
