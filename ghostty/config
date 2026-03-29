@@ -1,15 +1,13 @@
-window-decoration = false 
+window-decoration = false
 # window-padding-x = 0
 # window-padding-y = 0
 window-padding-balance = true
-# window-width = 110
-# window-height = 25 
 
-font-family = JetBrainsMono Nerd Font 
+font-family = JetBrainsMono Nerd Font
 font-size = 15
 
-background-opacity = 0.98
-theme = OneHalfDark
+background-opacity = 0.97
+theme = One Double Dark
 
 # background = #252930
 background = #1e2127
