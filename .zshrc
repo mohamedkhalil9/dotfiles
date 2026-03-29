@@ -99,3 +99,16 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+# bun completions
+[ -s "/home/mohamed/.bun/_bun" ] && source "/home/mohamed/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/bin/env"
+
+# opencode
+export PATH=/home/mohamed/.opencode/bin:$PATH
