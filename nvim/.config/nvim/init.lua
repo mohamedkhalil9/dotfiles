@@ -31,9 +31,6 @@ require('lazy').setup {
   require 'plugins.vim-be-good',
   require 'plugins.harpoon',
   require 'plugins.render-markdown',
-  -- require 'plugins.supermaven',
-  -- require 'plugins.copilot',
-  -- require 'plugins.copilot-chat',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
