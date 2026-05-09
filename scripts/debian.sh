@@ -15,6 +15,7 @@ ssh -T git@github.com
 
 # clone dotfiles
 git clone git@github.com:mohamedkhalil9/dotfiles.git
+
 # stow dotfiles
 sudo nala install stow
 # move all config files in the directory . to ~/
@@ -126,6 +127,7 @@ ww -f apidog -c apidog             # alt a
 ww -f org.kde.dolphin -c dolphin   # alt e
 # ww -f notion-electron -c notion-electron # ALT+N
 ww -f notion-desktop -c /home/user/dir/notion.AppImage
+ww -f brave-browser -c brave-browser
 ww -f org.kde.okular -c okular # ALT R
 ww -f mpv -c mpv               # ALT Y
 ww -f code -c code             # ALT V
