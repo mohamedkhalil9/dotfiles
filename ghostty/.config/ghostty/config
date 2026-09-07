@@ -4,9 +4,9 @@ window-decoration = false
 window-padding-balance = true
 
 font-family = JetBrainsMono Nerd Font
-font-size = 15
+font-size = 14.5
 
-background-opacity = 0.97
+background-opacity = 0.88
 theme = One Double Dark
 
 # background = #252930

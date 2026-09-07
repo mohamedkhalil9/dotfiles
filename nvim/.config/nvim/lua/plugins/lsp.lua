@@ -153,7 +153,7 @@ return {
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
       -- copilot.lua only works with its own copilot lsp server
-      copilot = { enabled = false },
+      -- copilot = { enabled = false },
       -- clangd = {},
       -- gopls = {},
       -- pyright = {},

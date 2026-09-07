@@ -1,5 +1,5 @@
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+# export LANG=en_US.UTF-8
+# export LC_ALL=en_US.UTF-8
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -95,20 +95,29 @@ export NVM_DIR="$HOME/.nvm"
 # pnpm
 export PNPM_HOME="/home/mohamed/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
-# bun completions
-[ -s "/home/mohamed/.bun/_bun" ] && source "/home/mohamed/.bun/_bun"
+# . "$HOME/.local/bin/env"
+
+# opencode
+export PATH=/home/mohamed/.opencode/bin:$PATH
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-. "$HOME/.local/bin/env"
+alias zen='/home/mohamed/.tarball-installations/zen/zen'
 
-# opencode
-export PATH=/home/mohamed/.opencode/bin:$PATH
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/mohamed/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# bun completions
+[ -s "/home/mohamed/.bun/_bun" ] && source "/home/mohamed/.bun/_bun"
+
+export PATH="/home/mohamed/.local/bin:$PATH"

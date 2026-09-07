@@ -19,7 +19,7 @@ return { -- Highlight, edit, and navigate code
       'vim',
       'regex',
       -- 'terraform',
-      -- 'sql',
+      'sql',
       'dockerfile',
       'toml',
       'json',
@@ -38,6 +38,7 @@ return { -- Highlight, edit, and navigate code
       'jsx',
       'css',
       'html',
+      'prisma',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
